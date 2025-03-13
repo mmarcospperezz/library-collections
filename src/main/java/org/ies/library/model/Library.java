@@ -77,14 +77,14 @@ public class Library {
 
     public List<BookLend> getBookLendsByIsbn(String isbn) {
         if (bookByIsbn.containsKey(isbn)) {
-            return null;
-        }
-        List<BookLend> lends = new ArrayList<>();
-        for (BookLend lend : bookLends) {
-            if (lend.getIsbn().equals(isbn)) {
-                lends.add(lend);
+            List<BookLend> lends = new ArrayList<>();
+            for (BookLend lend : bookLends) {
+                if (lend.getIsbn().equals(isbn)) {
+                    lends.add(lend);
+                }
             }
+            return lends;
         }
-        return lends;
+        return null;
     }
 }
