@@ -70,9 +70,8 @@ public class Library {
     public Set<String> getBookGenresByIsbn(String isbn) {
         if (bookByIsbn.containsKey(isbn)) {
             return bookByIsbn.get(isbn).getGenres();
-        } else {
-            return null;
         }
+        return null;
     }
 
     public List<BookLend> getBookLendsByIsbn(String isbn) {
